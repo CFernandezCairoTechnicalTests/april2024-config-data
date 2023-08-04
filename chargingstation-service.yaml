@@ -13,7 +13,7 @@ spring:
     zipkin: http://localhost:9411
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/electricalvehicle?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    url: jdbc:mysql://localhost:3306/electricalvehicle?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
     username: root
     password: password
   jpa:
