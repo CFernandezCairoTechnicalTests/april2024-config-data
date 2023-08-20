@@ -1,2 +1,2 @@
 # config-data
-Services configurations for config-service
+Services configurations for microservices
