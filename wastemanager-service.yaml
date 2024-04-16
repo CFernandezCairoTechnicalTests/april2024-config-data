@@ -1,8 +1,6 @@
 spring:
   application:
     name: ${APPLICATION_NAME:wastemanager-service}
-    #zipkin: http://${ZIPKIN_HOST:host.docker.internal}:${ZIPKIN_PORT:9411}
-    zipkin: http://${ZIPKIN_HOST:127.0.0.1}:${ZIPKIN_PORT:9411}
   kafka:
     #bootstrap-servers: http://${KAFKA_HOST:host.docker.internal}:${KAFKA_PORT:9092}
     bootstrap-servers: http://${KAFKA_HOST:127.0.0.1}:${KAFKA_PORT:9092}
@@ -18,8 +16,3 @@ eureka:
       defaultZone: http://${EUREKA_HOST:127.0.0.1}:${EUREKA_PORT:8761}/eureka/
     instance:
       instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-zipkin:
-  #baseurl: http://${ZIPKIN_HOST:host.docker.internal}:${ZIPKIN_PORT:9411}
-  baseurl: http://${ZIPKIN_HOST:127.0.0.1}:${ZIPKIN_PORT:9411}
-  sample:
-    probability: 1.0
