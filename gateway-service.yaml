@@ -12,6 +12,6 @@ spring:
           enabled: true
       routes:
         - id: chargingstation-service
-          uri: lb://chargingstation-service
+          uri: lb://wastemanager-service
           predicates:
-            - Path=/chargingstation/**
+            - Path=/wastemanager/**
