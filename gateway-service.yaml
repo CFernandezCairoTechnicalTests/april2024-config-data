@@ -1,0 +1,17 @@
+#server:
+#  port: 8080
+#  name: 'gateway-service'
+server:
+  port: ${APPLICATION_PORT:8080}
+  name: ${APPLICATION_NAME:gateway-service}
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: chargingstation-service
+          uri: lb://chargingstation-service
+          predicates:
+            - Path=/chargingstation/**
